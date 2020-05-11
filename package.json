@@ -6,7 +6,7 @@
     "build": "tsc",
     "watch": "tsc -w",
     "lint": "tslint -c tslint.json -p tsconfig.json",
-    "test:e2e": "./node_modules/.bin/_mocha --opts ./test/e2e/mocha.opts",
+    "test:e2e": "./node_modules/.bin/_mocha --recursive --opts ./test/e2e/mocha.opts",
     "test:e2e:allure": "./node_modules/.bin/_mocha --opts ./test/e2e/mocha-allure.opts",
     "clean": "rimraf node_modules dist",
     "rebuild": "electron-builder install-app-deps",
