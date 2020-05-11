@@ -1,20 +1,14 @@
 language: node_js
 
-node_js:
-  - 'node'
-  - '10'
-  - '8'
-
-env:
-  - workerCount=3 timeout=600000
-
-matrix:
-  fast_finish: true
-
 branches:
   only:
   - master
   - /^release-.*/
+
+before_script:
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then export DISPLAY=:99.0; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sh -e /etc/init.d/xvfb start; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sleep 3; fi
 
 install:
   - npm uninstall typescript --no-save
