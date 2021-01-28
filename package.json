@@ -31,7 +31,7 @@
     "@types/mocha": "^5.2.5",
     "@types/webdriverio": "^4.10.4",
     "chai": "^4.2.0",
-    "electron": "^3.0.2",
+    "electron": "^9.4.0",
     "mocha": "^5.2.0",
     "mocha-allure-reporter": "^1.4.0",
     "rimraf": "^2.6.2",
